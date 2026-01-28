@@ -69,19 +69,19 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Step 1: Add video lectures
+#### Step 1: Add video lectures
 
     Place all videos inside the `videos/` folder.
 
-### Step 2: Convert videos to MP3
+#### Step 2: Convert videos to MP3
 
-### Step 3: Convert MP3 to JSON
+#### Step 3: Convert MP3 to JSON
 
-### Step 4: Generate vector embeddings
+#### Step 4: Generate vector embeddings
 
-### Step 5: Ask questions
+#### Step 5: Ask questions
 
-## Project Structure
+### Project Structure
 
 ```
 MAJOR-PROJECT/
