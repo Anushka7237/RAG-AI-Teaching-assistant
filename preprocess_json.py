@@ -1,0 +1,40 @@
+#reading chunks
+import requests 
+import os
+import json
+import pandas as pd
+import numpy as np
+import joblib
+from sklearn.metrics.pairwise import cosine_similarity
+
+def create_embedding(text_list):
+    r=requests.post("http://localhost:11434/api/embed",json=
+                {
+                    "model":"bge-m3",
+                    "input":text_list
+                })
+    embedding=r.json()['embeddings']
+    return embedding
+
+# a=create_embedding(["cat sat on the mat","harry dances on the mat"])
+# print(a)
+    
+jsons=os.listdir("json") #list all the json
+chunk_id=0
+my_dicts=[]
+for json_file in jsons:
+    with open(f"json/{json_file}") as f:
+        content=json.load(f)
+    embeddings=create_embedding([c['text'] for c in content['chunks']])
+    print(f"Creating embedding for {json_file}")
+    for i,chunk in enumerate(content['chunks']):
+        # print(chunk)
+        chunk['chunk_id']=chunk_id
+        chunk['embedding']=embeddings[i]
+        chunk_id+=1
+        my_dicts.append(chunk)
+        
+df=pd.DataFrame.from_records(my_dicts)
+joblib.dump(df,'embeddings.joblib')
+# print(df)
+
