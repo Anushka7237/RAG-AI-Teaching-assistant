@@ -1,0 +1,26 @@
+# Core Python utilities
+numpy>=1.23.0
+pandas>=1.5.0
+joblib>=1.3.0
+
+# Audio & video processing
+ffmpeg-python>=0.2.0
+
+# Speech-to-Text
+openai-whisper>=20231117
+
+# NLP & Embeddings
+scikit-learn>=1.2.0
+
+
+# LLaMA 3.2 / Local LLM support
+transformers>=4.40.0
+accelerate>=0.28.0
+huggingface-hub>=0.22.0
+
+# LLM / API support (if used)
+openai>=1.0.0
+
+# Configuration
+python-dotenv>=1.0.0
+subprocess
