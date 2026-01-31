@@ -137,10 +137,6 @@ _Note: Output quality depends on the clarity of video audio and transcription ac
 Refer to `requirements.txt` for detailed dependency versions.
 
 
-## Contributing
-
-Contributions are welcome! Feel free to submit pull requests or open issues for bugs and feature requests.
-
 ## 🌐 Connect here <p align="left">
 
 <a href="https://linkedin.com/in/anushka-gupta18" target="blank"> <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="anushka-gupta18" height="30" width="40" /> </a> </p>
